@@ -29,6 +29,8 @@ pipeline{
                 script {
                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
                             parameters: [choice(name: 'RELEASE_SCOPE', choices: 'patch\nminor\nmajor', description: 'What is the release scope?')]
+			parameters: [choice(name: 'Environement', choices: 'patch\nminor\nmajor', description: 'What is the Env?')]
+			parameters: [choice(name: 'Deploy-Method', choices: 'patch\nminor\nmajor', description: 'What is deploy method?')]
                 }
 		    echo "After"
                 echo "${env.RELEASE_SCOPE}"
