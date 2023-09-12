@@ -17,6 +17,11 @@ pipeline{
 			     }
 			}
 		}
+		stage('Sam-Checkout'){
+			steps{
+				git branch: "${Target_Environment}", credentialsId: 'Sam-GIT', url: 'https://github.com/sampathmsrit/Trail.git'
+			}
+		}
 		stage('Build'){
 			steps{
 				echo "Qulaity successfully"
