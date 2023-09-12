@@ -1,3 +1,6 @@
+# Ignore files
+ignore/sample.txt
+
 # Gradle files
 .gradle/
 build/
