@@ -7,8 +7,9 @@ pipeline{
 			      	echo "Environment Selected = ${Target_Environment}"
 		    		echo "Deployment Selected = ${Deploy_Method}"
 				echo "WorkingWorking = ${env.WORKSPACE}"
+				bat git --version
 				script{
-					sh commit_ID = git rev-parse HEAD
+					commit_ID = git rev-parse HEAD
 					echo "Commit ID is = ${commit_ID}"
 				}
 				script {
