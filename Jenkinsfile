@@ -2,17 +2,20 @@ pipeline{
 	agent any
 	stages{
 		stage('Source'){
-			steps{echo "sampath Compiled successfully"
+			steps{
+				echo "sampath Compiled successfully"
 			      	echo "Environment Selected = ${Target_Environment}"
 		    		echo "Deployment Selected = ${Deploy_Method}"
-			      if ( Target_Environment == "iDev") {
+				script {
+			      if ( Target_Environment == 'iDev') {
 				      echo "YEss Environment Selected = ${Target_Environment}"				      
-			      }else if( Target_Environment == "QA" ){
+			      }else if( Target_Environment == 'QA' ){
 				      echo "YEss Environment Selected = ${Target_Environment}"			      
-				}else if( Target_Environment == "UAT" ){
+				}else if( Target_Environment == 'UAT' ){
 				      echo "YEss Environment Selected = ${Target_Environment}"
 				}
 			     }
+			}
 		}
 		stage('Build'){
 			steps{
