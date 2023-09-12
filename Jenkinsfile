@@ -8,7 +8,7 @@ pipeline{
 		    		echo "Deployment Selected = ${Deploy_Method}"
 				echo "WorkingWorking = ${env.WORKSPACE}"
 				script{
-					commit_ID = git rev-parse HEAD
+					sh commit_ID = git rev-parse HEAD
 					echo "Commit ID is = ${commit_ID}"
 				}
 				script {
