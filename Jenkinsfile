@@ -12,6 +12,7 @@ pipeline{
 				}else if( Target_Environment == "UAT" ){
 				      echo "YEss Environment Selected = ${Target_Environment}"
 				}
+			     }
 		}
 		stage('Build'){
 			steps{
