@@ -6,6 +6,9 @@ pipeline{
 				echo "sampath Compiled successfully"
 			      	echo "Environment Selected = ${Target_Environment}"
 		    		echo "Deployment Selected = ${Deploy_Method}"
+				sh pwd
+				commit_ID = git rev-parse HEAD
+				echo "Commit ID is = ${commit_ID}"
 				script {
 			      if ( Target_Environment == 'iDev') {
 				      echo "YEss Environment Selected = ${Target_Environment}"				      
