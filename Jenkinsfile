@@ -34,6 +34,10 @@ pipeline{
                 }
 		    echo "After"
                 echo "${env.RELEASE_SCOPE}"
+		    echo "Environment Selected ${Environment}"
+		    echo "Deployment Selected ${Deploy_Method}"
+
+		    
             }
         }
 		}
