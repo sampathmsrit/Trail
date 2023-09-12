@@ -2,8 +2,8 @@ pipeline{
 	agent any
 	stages{
 		stage('Source'){
-			steps{echo "Compiled successfully"
-			git 'https://github.com/simplilearn-github/Pipeline_Script.git'}
+			steps{echo "sampath Compiled successfully"
+			}
 				}
 		stage('Build'){
 			steps{echo "Qulaity successfully"}
