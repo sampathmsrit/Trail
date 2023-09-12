@@ -34,8 +34,8 @@ pipeline{
                 }
 		    echo "After"
                 echo "${env.RELEASE_SCOPE}"
-		    echo "Environment Selected ${Environment}"
-		    echo "Deployment Selected ${Deploy_Method}"
+		    echo "Environment Selected = ${Target_Environment}"
+		    echo "Deployment Selected = ${Deploy_Method}"
 
 		    
             }
