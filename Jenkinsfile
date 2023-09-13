@@ -40,6 +40,7 @@ pipeline{
 			      echo "===================="
 			      echo "Present Commit ID = ${env.GIT_COMMIT}"
 			      echo "Branch = ${env.GIT_BRANCH}"
+			      git --version
 			}
 		}
 
