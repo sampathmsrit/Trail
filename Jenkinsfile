@@ -43,6 +43,7 @@ pipeline{
 			      script{
 				// bat git --version
 				      bat label: '', script: 'dir'
+				      bat label: '', script: 'git --version'
 				      
 			      }
 			      
