@@ -41,7 +41,9 @@ pipeline{
 			      echo "Present Commit ID = ${env.GIT_COMMIT}"
 			      echo "Branch = ${env.GIT_BRANCH}"
 			      script{
-				bat git --version      
+				// bat git --version
+				      bat label: '', script: 'dir'
+				      
 			      }
 			      
 			}
