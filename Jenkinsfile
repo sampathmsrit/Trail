@@ -8,11 +8,11 @@ pipeline{
 		    		echo "Deployment Selected = ${Deploy_Method}"
 				echo "WorkingWorking = ${env.WORKSPACE}"
 				
-				script{
-					bat git --version
-					bat commit_ID = git rev-parse HEAD
-					echo "Commit ID is = ${commit_ID}"
-				}
+				// script{
+				// 	bat git --version
+				// 	bat commit_ID = git rev-parse HEAD
+				// 	echo "Commit ID is = ${commit_ID}"
+				// }
 				script {
 			      if ( Target_Environment == 'iDev') {
 				      echo "YEss Environment Selected = ${Target_Environment}"				      
@@ -34,6 +34,9 @@ pipeline{
 				echo "Qulaity successfully"
 			}
 				}
+		stage('Win Commands'){
+			steps{echo "Win Commands Execution test"
+			bat dir}
 		// stage("Interactive_Input") {
   //           steps {
   //               script {
