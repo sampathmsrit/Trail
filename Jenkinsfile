@@ -37,6 +37,7 @@ pipeline{
 		stage('Win Commands'){
 			steps{echo "Win Commands Execution test"
 			bat dir}
+		}
 		// stage("Interactive_Input") {
   //           steps {
   //               script {
