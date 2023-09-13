@@ -36,7 +36,12 @@ pipeline{
 				}
 		stage('Win Commands'){
 			steps{echo "Win Commands Execution test"
-			bat dir}
+			      echo "Getting parameteres"
+			      echo "===================="
+			      echo "Present Commit ID = ${env.GIT_COMMIT}"
+			      echo "Branch = ${env.GIT_BRANCH}"
+			      
+			}
 		}
 		// stage("Interactive_Input") {
   //           steps {
