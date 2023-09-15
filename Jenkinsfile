@@ -39,6 +39,7 @@ pipeline{
 			      echo "Getting parameteres"
 			      echo "===================="
 			      echo "Present Commit ID = ${env.GIT_COMMIT}"
+			      echo "Last success build Commit ID = ${env.GIT_COMMIT}"
 			      echo "Branch = ${env.GIT_BRANCH}"
 			      script{
 				// bat git --version
@@ -49,6 +50,12 @@ pipeline{
 			      
 			}
 		}
+		stage('Final'){
+			steps{
+				echo "Qulaity successfully"
+				exit "0"
+			}
+				}
 
 		
 		// stage("Interactive_Input") {
