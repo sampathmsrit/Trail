@@ -51,8 +51,13 @@ pipeline{
 			}
 		}
 		stage('Final'){
+			environment{
+				samcred = credentials('samID')
+			}
 			steps{
 				echo "Qulaity successfully"
+				echo "$samcred_USR"
+				echo "$samcred_PSW"
 			}
 				}
 
