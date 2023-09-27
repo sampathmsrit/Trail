@@ -52,12 +52,12 @@ pipeline{
 		}
 		stage('Final'){
 			environment{
-				samcred = credentials('samID')
+				samID = credentials('samID')
 			}
 			steps{
 				echo "Qulaity successfully"
-				echo "$samcred_USR"
-				echo "$samcred_PSW"
+				echo "$samID_USR"
+				echo "$samID_PSW"
 			}
 				}
 
