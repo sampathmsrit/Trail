@@ -53,7 +53,6 @@ pipeline{
 		stage('Final'){
 			steps{
 				echo "Qulaity successfully"
-				exit "0"
 			}
 				}
 
