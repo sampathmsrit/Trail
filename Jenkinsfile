@@ -59,7 +59,14 @@ pipeline{
 				echo "$samID_USR"
 				echo "$samID_PSW"
 			}
-				}
+		}
+		stage ('Test'){
+			steps{
+				echo "Testing credentials"
+				echo "$samID_USR"
+				echo "$samID_PSW"
+			}
+		}
 
 		
 		// stage("Interactive_Input") {
