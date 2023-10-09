@@ -1,5 +1,8 @@
 pipeline{
 	agent any
+				environment{
+				samID = credentials('samID')
+			}
 	stages{
 		stage('Source'){
 			steps{
@@ -51,9 +54,7 @@ pipeline{
 			}
 		}
 		stage('Final'){
-			environment{
-				samID = credentials('samID')
-			}
+
 			steps{
 				echo "Qulaity successfully"
 				echo "$samID_USR"
