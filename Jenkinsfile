@@ -1,8 +1,8 @@
 pipeline{
 	agent any
-				environment{
-				samID = credentials('samID')
-			}
+	environment{
+		samID = credentials('samID')
+	}
 	stages{
 		stage('Source'){
 			steps{
